@@ -18,6 +18,7 @@ if (!isset($pageTitle)) {
        <nav class="main-nav">
            <a href="/index.php">Inici</a>
            <a href="/galeria.php">Galeria</a>
+           <a href="/login.php">Login</a>
        </nav>
    </div>
 </header>

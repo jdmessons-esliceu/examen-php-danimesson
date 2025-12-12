@@ -1,6 +1,53 @@
-/* -----------------------------
-  HACK: BORDER-BOX UNIVERSAL
------------------------------- */
+:root{
+   --primary-color:#4A90A4;
+}
+
+#hero {
+   background-image: url("../uploads/fons.jpg");
+   height: 90vh;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-align: center;
+}
+
+#hero::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.25);
+   z-index: 1;
+}
+
+#hero h1,
+#hero p,
+#hero a {
+   z-index: 2;
+}
+
+#hero a {
+   margin-top: 1.6rem;
+   background-color: var(--primary-color);
+   padding: 0.8rem 1.6rem;
+   color: white;
+   text-decoration: none;
+   border-radius: 8px;
+   font-size: 1.6rem;
+}
+
+#hero a:hover {
+   background-color: white;
+   color: var(--primary-color);
+}
+
 html {
    box-sizing: border-box;
    font-size: 62.5%;
@@ -142,3 +189,4 @@ body {
    padding: 1.2rem 0;
    font-size: 1.4rem;
 }
+
